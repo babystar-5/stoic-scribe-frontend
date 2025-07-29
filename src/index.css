@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 15% 12%; /* dark charcoal */
+    --foreground: 210 20% 96%; /* light gray */
+
+    --card: 210 15% 16%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 210 15% 16%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 177 44% 51%; /* #4db6b3 */
+    --primary-foreground: 210 20% 96%;
+
+    --secondary: 210 10% 22%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 210 10% 22%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 177 44% 51%;
+    --accent-foreground: 210 20% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 96%;
+
+    --border: 210 10% 22%;
+    --input: 210 10% 22%;
+    --ring: 177 44% 51%;
+
+    /* AI Spark Theme Colors */
+    --spark-primary: 177 44% 51%; /* #4db6b3 */
+    --spark-secondary: 177 44% 61%; /* lighter teal */
+    --spark-glow: 177 44% 71%;
+    --spark-dim: 177 44% 41%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--spark-primary)), hsl(var(--spark-secondary)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--spark-primary) / 0.3), hsl(var(--spark-secondary) / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(210 15% 12%));
+
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 30px hsl(var(--spark-primary) / 0.3);
+    --shadow-strong: 0 10px 40px hsl(var(--spark-primary) / 0.2);
+    --shadow-card: 0 8px 32px hsl(210 15% 8% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 15% 12%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 177 44% 51%;
+    --sidebar-primary-foreground: 210 20% 96%;
+    --sidebar-accent: 210 10% 22%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 210 10% 22%;
+    --sidebar-ring: 177 44% 51%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .animate-scroll-up {
+    animation: scroll-up 20s linear infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
