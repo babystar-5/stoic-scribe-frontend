@@ -137,7 +137,7 @@ export const TextProcessor = () => {
               content: getPhilosopherPrompt(selectedPhilosopher, inputText),
             },
           ],
-          model: "gpt-4",
+          model: "gpt-4o",
           max_tokens: 500,
           temperature: 0.7,
         }),
@@ -229,7 +229,7 @@ export const TextProcessor = () => {
   };
 
   // Embed code for users
-  const embedCode = `<iframe src=\"https://yourdomain.com\" width=\"100%\" height=\"600\" style=\"border: none; border-radius: 12px; overflow: hidden;\" allow=\"clipboard-write\" title=\"Stoic Scribe\"></iframe>`;
+  const embedCode = `<iframe src=\"${window.location.origin}\" width=\"100%\" height=\"600\" style=\"border: none; border-radius: 12px; overflow: hidden;\" allow=\"clipboard-write\" title=\"Stoic Scribe\"></iframe>`;
 
   const handleCopyEmbed = () => {
     navigator.clipboard.writeText(embedCode.replace(/\\"/g, '"'));
