@@ -20,58 +20,7 @@ import {
   Share2 as ShareIcon,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const stoicQuotes = [
-  "We suffer more often in imagination than in reality. – Seneca",
-  "Life is long, if you know how to use it. – Seneca",
-  "A gem cannot be polished without friction, nor a man perfected without trials. – Seneca",
-  "It is not that we have a short time to live, but that we waste a lot of it. – Seneca",
-  "Difficulties strengthen the mind, as labour does the body. – Seneca",
-  "You have power over your mind — not outside events. Realize this, and you will find strength. – Marcus Aurelius",
-  "The impediment to action advances action. What stands in the way becomes the way. – Marcus Aurelius",
-  "Everything we hear is opinion, not a fact. Everything we see is a perspective, not the truth. – Marcus Aurelius",
-  "Confine yourself to the present. – Marcus Aurelius",
-  "Waste no more time arguing about what a good man should be. Be one. – Marcus Aurelius",
-  "If it is not right, do not do it. If it is not true, do not say it. – Marcus Aurelius",
-  "The best revenge is to be unlike him who performed the injury. – Marcus Aurelius",
-  "He who fears death will never do anything worth of a man who is alive. – Seneca",
-  "Begin at once to live, and count each separate day as a separate life. – Seneca",
-  "As is a tale, so is life: not how long it is, but how good it is, is what matters. – Seneca",
-  "No man is free who is not master of himself. – Epictetus",
-  "Men are disturbed not by things, but by the view which they take of them. – Epictetus",
-  "It is the nature of the wise to resist pleasures, but the foolish to be a slave to them. – Epictetus",
-  "We have two ears and one mouth so that we can listen twice as much as we speak. – Epictetus",
-  "First say to yourself what you would be; and then do what you have to do. – Epictetus",
-  "Don't explain your philosophy. Embody it. – Epictetus",
-  "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control. – Epictetus",
-  "Man conquers the world by conquering himself. – Zeno of Citium",
-  "Happiness is a good flow of life. – Zeno of Citium",
-  "Well-being is realized by small steps, but is truly no small thing. – Zeno of Citium",
-  "Steel your sensibilities, so that life shall hurt you as little as possible. – Zeno of Citium",
-  "Luck is what happens when preparation meets opportunity. – Seneca",
-  "To wish to be well is a part of becoming well. – Seneca",
-  "He suffers more than necessary, who suffers before it is necessary. – Seneca",
-  "You act like mortals in all that you fear, and like immortals in all that you desire. – Seneca",
-  "The whole future lies in uncertainty: live immediately. – Seneca",
-  "The soul becomes dyed with the color of its thoughts. – Marcus Aurelius",
-  "Look well into thyself; there is a source of strength which will always spring up if thou wilt always look. – Marcus Aurelius",
-  "How much more grievous are the consequences of anger than the causes of it. – Marcus Aurelius",
-  "A man’s worth is no greater than his ambitions. – Marcus Aurelius",
-  "Be tolerant with others and strict with yourself. – Marcus Aurelius",
-  "Receive without pride, let go without attachment. – Marcus Aurelius",
-  "If you want to improve, be content to be thought foolish and stupid. – Epictetus",
-  "Circumstances don’t make the man, they only reveal him to himself. – Epictetus",
-  "He who laughs at himself never runs out of things to laugh at. – Epictetus",
-  "It’s not what happens to you, but how you react to it that matters. – Epictetus",
-  "Attach yourself to what is spiritually superior. – Epictetus",
-  "You become what you give your attention to. – Epictetus",
-  "Be not angry that you cannot make others as you wish them to be, since you cannot make yourself as you wish to be. – Thomas à Kempis",
-  "Time is like a river made up of events which happen, and a violent stream; for as soon as a thing has been seen, it is carried away. – Marcus Aurelius",
-  "Do every act of your life as though it were the very last act of your life. – Marcus Aurelius",
-  "The key is to keep company only with people who uplift you. – Epictetus",
-  "Only the educated are free. – Epictetus"
-];
-
+import { stoicQuotes } from "@/lib/const";
 
 export const TextProcessor = () => {
   const [inputText, setInputText] = useState("");
@@ -404,23 +353,7 @@ export const TextProcessor = () => {
         {/* Footer */}
         <footer className="w-full text-center text-xs sm:text-sm text-muted-foreground px-2 mt-8 mb-2 flex flex-col items-center gap-2">
           <div>
-            <p>
-              Part of{" "}
-              <a
-                href="https://www.oliptherapy.co.uk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Olip Therapy
-              </a>
-            </p>
-          </div>
-          <div>
-            Embed this app anywhere with:{" "}
-            <code className="inline-block bg-muted px-1.5 py-0.5 rounded text-foreground text-xs select-all">
-              &lt;iframe src=&quot;https://yourdomain.com&quot;
-              width=&quot;100%&quot; height=&quot;600&quot;&gt;&lt;/iframe&gt;
-            </code>
+            <p className="text-md">Powered by OpenAI · Copyright &copy;2025</p>
           </div>
         </footer>
       </div>
